@@ -1,0 +1,11 @@
+.header {
+    background: #ddd;
+}
+
+.header__title {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    border-bottom: 3px solid;    
+    padding: 15px 15px;
+}
