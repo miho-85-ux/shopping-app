@@ -7,7 +7,8 @@
 @section('content')
 <div class="shopping__content">
     <div class="content__inner">
-        <form class="content__item" action="" method="POST">
+        <form class="content__item" action="/store" method="POST">
+            @csrf 
             <div >
                 <label class="content__title" for="">お買い物リスト</label>
                 <div>
