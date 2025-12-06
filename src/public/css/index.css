@@ -1,0 +1,85 @@
+.shopping__content {
+    margin: 0 auto;
+    width: auto;
+}
+
+.content__inner {
+    border-bottom: 2px solid #ddd;
+    padding: 15px 15px;
+}
+
+.content__item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content__title {
+    font-size: 20px;
+}
+
+.content__item--submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background: #878787;
+    color: white;
+
+}
+
+
+
+
+.shopping__table {
+    margin: 25px auto;
+    border-collapse: collapse;
+    max-width: 1230px;
+}
+
+.table {
+    table-layout: fixed;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.table__item--title {
+    font-size: 20px;
+}
+
+th, td {
+    border-bottom: solid 1px #ddd;
+    padding: 15px 15px;
+    text-align: center;
+    width: 25%;
+    height: 30%;
+}
+
+.table__submit--item {
+    padding: 0 0 0 200px;
+}
+
+.table__submit--update {
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(0, 0, 255, 0.296);
+    color: white;
+    
+}
+
+.table__submit--delete {
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0.414);
+    color: white;
+
+}
+
+input {
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+}
