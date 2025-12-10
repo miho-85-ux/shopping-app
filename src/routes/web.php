@@ -20,4 +20,4 @@ Route::get('/', function () {
 
 Route::get('/top', [ShoppingController::class, 'index']);
 
-ROute::post('/store', [ShoppingController::class, 'store']);
+Route::post('/store', [ShoppingController::class, 'store']);

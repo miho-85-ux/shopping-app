@@ -8,6 +8,14 @@ use App\Models\Shopping;
 class ShoppingController extends Controller
 {
     public function index() {
-        return view ('index');
+        $items = Shopping::all();
+
+        return view ('index', compact('items'));
+    }
+
+    public function store(Request $request) {
+        Shopping::create($request->all());   
+    
+        return back();
     }
 }

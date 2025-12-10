@@ -56,12 +56,17 @@
                 <th></th>
                 <th></th>
             </tr>
+            @foreach ($items as $item)
             <tr>  
-                <form action="">
+                <form action="/update" method="POST">
+                    @method('PATCH')
+                    @csrf
                     <td>
-                        <input type="text">
+                        {{ $item->name}}
                     </td>
-                    <td>個</td>
+                    <td>
+                        {{ $item->quantity}}個
+                    </td>
                     <td class="table__submit--item">
                         <button class="table__submit--update" type="submit">更新</button>
                     </td>
@@ -72,8 +77,8 @@
                     </td>
                 </form>  
             </tr>
-        </table>
-
+            @endforeach
+        </table>    
     </div>
 </div>
 
