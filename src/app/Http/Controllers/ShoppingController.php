@@ -29,8 +29,12 @@ class ShoppingController extends Controller
         $item = $request->only(['name','quantity']);
         Shopping::find($request->key)->update($item);
         
-        return redirect('/top');
+        return redirect('/top')->with('message', '保存しました');
     }
 
-    
+    public function destroy(Request $request) {
+        Shopping::find($request->key)->delete();
+
+        return back()->with('message', '削除しました');
+    }
 }

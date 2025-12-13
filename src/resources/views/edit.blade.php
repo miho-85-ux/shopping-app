@@ -14,13 +14,13 @@
             <tr>
                 <th class="table-title">名前</th>
                 <td>
-                    <input type="text" name="name" value="{{ $item->name }}">
+                    <input type="text" name="name" value="{{ old('name', $item->name) }}">
                 </td>
             </tr>
             <tr>
                 <th class="table-title">個数</th>
                 <td>
-                    <input type="text" name="quantity" value="{{ $item->quantity }}">
+                    <input type="text" name="quantity" value="{{ old('quantity', $item->quantity) }}">
                 </td>
             </tr>
         </table>
