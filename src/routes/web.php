@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/top', [ShoppingController::class, 'index']);
 
 Route::post('/store', [ShoppingController::class, 'store']);
+
+Route::patch('/edit', [ShoppingController::class, 'edit']);
+
+Route::patch('/update', [ShoppingController::class, 'update']);

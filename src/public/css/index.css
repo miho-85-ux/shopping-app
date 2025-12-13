@@ -24,7 +24,7 @@
     border: none;
     background: #878787;
     color: white;
-
+    cursor: pointer;
 }
 
 
@@ -65,7 +65,7 @@ th, td {
     border: none;
     background-color: rgba(0, 0, 255, 0.296);
     color: white;
-    
+    cursor: pointer;
 }
 
 .table__submit--delete {
@@ -75,7 +75,7 @@ th, td {
     border: none;
     background-color: rgba(255, 0, 0, 0.414);
     color: white;
-
+    cursor: pointer;
 }
 
 input {

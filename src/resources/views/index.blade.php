@@ -58,17 +58,18 @@
             </tr>
             @foreach ($items as $item)
             <tr>  
-                <form action="/update" method="POST">
+                <form action="/edit" method="POST">
                     @method('PATCH')
                     @csrf
+                    <input type="hidden" id="postId" name="key" value="{{ $item->id }}" />
                     <td>
-                        {{ $item->name}}
+                        {{ $item->name }}
                     </td>
                     <td>
-                        {{ $item->quantity}}個
+                        {{ $item->quantity }}個
                     </td>
                     <td class="table__submit--item">
-                        <button class="table__submit--update" type="submit">更新</button>
+                        <button class="table__submit--update" type="submit">編集</button>
                     </td>
                 </form>
                 <form action="">
