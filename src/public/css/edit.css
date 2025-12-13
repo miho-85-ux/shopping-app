@@ -1,0 +1,42 @@
+.edit-content {
+    margin: 0 auto;
+    width: 1230px;
+}
+
+.edit-table {
+    width: 80%;
+    margin: 50px;
+}
+
+th, td {
+    border: 2px solid #bdb9b9;
+    padding: 20px 50px;
+}
+
+.table-title {
+    background-color: #ddd;
+    width: 30%;
+    
+}
+
+input {
+    border: none;
+    font-size: 18px;
+    padding: 20px;
+    width: 100%;
+}
+
+.edit-submit {
+    width: 100%;
+    text-align: center;
+}
+
+.edit-submit__button {
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    padding: 20px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+}
