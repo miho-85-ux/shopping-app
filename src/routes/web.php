@@ -25,3 +25,5 @@ Route::post('/store', [ShoppingController::class, 'store']);
 Route::patch('/edit', [ShoppingController::class, 'edit']);
 
 Route::patch('/update', [ShoppingController::class, 'update']);
+
+Route::delete('/destroy', [ShoppingController::class, 'destroy']);

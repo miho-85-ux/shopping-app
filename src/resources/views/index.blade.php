@@ -5,20 +5,27 @@
 @endsection
 
 @section('content')
+
+@if (session('message'))
+<div class="alart">
+    {{ session('message') }}
+</div>
+@endif
+
 <div class="shopping__content">
     <div class="content__inner">
         <form class="content__item" action="/store" method="POST">
             @csrf 
             <div >
-                <label class="content__title" for="">お買い物リスト</label>
+                <label class="content__title" for="name">お買い物リスト</label>
                 <div>
-                    <input type="text" name="name" placeholder="買うもの">
+                    <input type="text" name="name" id="name" placeholder="買うもの">
                 </div>
             </div>
             <div>
-                <label class="content__title" for="">個数</label>
+                <label class="content__title" for="quantity">個数</label>
                 <div>
-                    <select name="quantity" id="">
+                    <select name="quantity" id="quantity">
                         <option value="1">1個</option>
                         <option value="2">2個</option>
                         <option value="3">3個</option>
@@ -33,15 +40,15 @@
     <div class="content__inner">
         <form class="content__item" action="">
             <div>
-                <label class="content__title" for="">検索</label>
+                <label class="content__title" for="sarch">検索</label>
                 <div>
-                    <input type="text" name="name" placeholder="検索したい商品名">
+                    <input type="text" name="name" id="sarch" placeholder="検索したい商品名">
                 </div>
             </div>
             <div>
-                <label class="content__title" for="">個数</label>
+                <label class="content__title" for="quantity">個数</label>
                 <div>
-                    <select name="quantity" id="">個</select>
+                    <select name="quantity" id="quantity">個</select>
                 </div>
             </div>
             <button class="content__item--submit" type="submit">検索</button>
@@ -72,7 +79,10 @@
                         <button class="table__submit--update" type="submit">編集</button>
                     </td>
                 </form>
-                <form action="">
+                <form action="/destroy" method="POSt">
+                    @method('DELETE')
+                    @csrf
+                    <input type="hidden" name="key" value="{{ $item->id }}" >
                     <td>
                         <button class="table__submit--delete" type="submit">削除</button>
                     </td>
