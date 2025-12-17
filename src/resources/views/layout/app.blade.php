@@ -12,7 +12,7 @@
 <body>
     <div class="header">
         <div class="header__title">
-            <h1>お買い物アプリ</h1>
+            <h1><a class="header__title--top" href="/">お買い物アプリ</a></h1>
         </div>
     </div>
     <main>

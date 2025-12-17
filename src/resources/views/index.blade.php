@@ -25,12 +25,13 @@
             <div>
                 <label class="content__title" for="quantity">個数</label>
                 <div>
-                    <select name="quantity" id="quantity">
-                        <option value="1">1個</option>
-                        <option value="2">2個</option>
-                        <option value="3">3個</option>
-                        <option value="4">4個</option>
-                        <option value="5">5個</option>                      
+                    <select class="select-quantity" name="quantity" id="quantity">
+                        <option value="" selected disabled>選択してください</option>
+                        @foreach (range(1, 10) as $quantity)
+                            <option value="{{ $quantity }}" >
+                                {{ $quantity}}個
+                            </option>    
+                        @endforeach                  
                     </select>
                 </div>
             </div>
@@ -38,17 +39,25 @@
         </form>
     </div>
     <div class="content__inner">
-        <form class="content__item" action="">
+        <form class="content__item" action="/search" method="GET">
+            @csrf 
             <div>
                 <label class="content__title" for="sarch">検索</label>
                 <div>
-                    <input type="text" name="name" id="sarch" placeholder="検索したい商品名">
+                    <input type="text" name="name" id="sarch" placeholder="検索したい商品名" value="{{ request('name') }}" >
                 </div>
             </div>
             <div>
                 <label class="content__title" for="quantity">個数</label>
                 <div>
-                    <select name="quantity" id="quantity">個</select>
+                    <select class="select-quantity" type="text" name="quantity" id="quantity">
+                        <option value="" selected disabled >選択してください</option>
+                        @foreach (range(1, 10) as $quantity)
+                            <option value="{{ $quantity }}" {{ request('quantity') == $quantity ? 'selected' : '' }}>
+                                {{ $quantity}}個
+                            </option>    
+                        @endforeach
+                    </select>
                 </div>
             </div>
             <button class="content__item--submit" type="submit">検索</button>

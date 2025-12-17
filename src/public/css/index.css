@@ -84,6 +84,17 @@ input {
     font-size: 18px;
 }
 
+.select-quantity{
+    font-size: 18px;
+    border: none;
+    padding: 10px 10px;
+    color: #999;
+}
+
+.select-quantity option:not([disabled]) {
+    color: #000;
+}
+
 .alart {
     padding: 10px 50px;
     width: 100%;
