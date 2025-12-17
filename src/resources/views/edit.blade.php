@@ -26,7 +26,7 @@
         </table>
         <div class="edit-submit">
             <button class="edit-submit__button" type="submit">登録</button>
-            <a class="edit-submit__button" href="/top">戻る</a>
+            <a class="edit-submit__button--back" href="/">戻る</a>
         </div>
     </form>
 </div>

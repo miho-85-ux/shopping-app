@@ -29,7 +29,7 @@ class ShoppingController extends Controller
         $item = $request->only(['name','quantity']);
         Shopping::find($request->key)->update($item);
         
-        return redirect('/top')->with('message', '保存しました');
+        return redirect('/')->with('message', '保存しました');
     }
 
     public function destroy(Request $request) {
@@ -37,4 +37,15 @@ class ShoppingController extends Controller
 
         return back()->with('message', '削除しました');
     }
+
+    public function search(Request $request) {
+        $items = Shopping::query()
+        ->nameSearch($request->name)
+        ->quantitySearch($request->quantity)
+        ->get();
+       
+
+        return view('index', compact('items'));
+    }
 }
+

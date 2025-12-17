@@ -9,3 +9,8 @@
     border-bottom: 3px solid;    
     padding: 15px 15px;
 }
+
+.header__title--top {
+    text-decoration: none;
+    color: black;
+}

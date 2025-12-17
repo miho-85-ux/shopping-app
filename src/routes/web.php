@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/top', [ShoppingController::class, 'index']);
+Route::get('/', [ShoppingController::class, 'index']);
 
 Route::post('/store', [ShoppingController::class, 'store']);
 
@@ -27,3 +27,5 @@ Route::patch('/edit', [ShoppingController::class, 'edit']);
 Route::patch('/update', [ShoppingController::class, 'update']);
 
 Route::delete('/destroy', [ShoppingController::class, 'destroy']);
+
+Route::get('/search', [ShoppingController::class, 'search']);
